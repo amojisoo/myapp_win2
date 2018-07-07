@@ -23,12 +23,15 @@ from . import views
 
 urlpatterns = [
 
+    url(r'^blog/', include('blog.urls')),
 
     url(r"info", views.info),
     url(r"jump", views.jump),
     url(r"temp", views.temp),
 
     url(r"", views.main), # order very important
+
+
 
     path('admin/', admin.site.urls),
 
