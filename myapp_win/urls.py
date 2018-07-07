@@ -22,10 +22,12 @@ from . import views
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
 
     url(r'^blog/', include('blog.urls')),
+    url(r'^info/', include('info.urls')),
 
-    url(r"info", views.info),
+    url(r"time", views.time),
     url(r"jump", views.jump),
     url(r"temp", views.temp),
 
@@ -33,6 +35,5 @@ urlpatterns = [
 
 
 
-    path('admin/', admin.site.urls),
 
 ]
