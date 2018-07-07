@@ -16,6 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf.urls import url , include
+from . import views
+
+
+
 urlpatterns = [
+
+
+    url(r"info", views.info),
+    url(r"jump", views.jump),
+    url(r"temp", views.temp),
+
+    url(r"", views.main), # order very important
+
     path('admin/', admin.site.urls),
+
 ]
