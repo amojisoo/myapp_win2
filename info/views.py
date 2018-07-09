@@ -16,6 +16,7 @@ from .form import Info_Form
 
 class Info_ListView(ListView):
     model = Info
+    paginate_by = 10
     #context_object_name = "infos"
 
 class Info_DetailView(DetailView):

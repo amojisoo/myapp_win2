@@ -13,10 +13,11 @@ class  Info(models.Model):
     #release_data    = models.DateTimeField( auto_now_add = True )
 
     class Meta:
-        ordering = ( "name", )
+        ordering = ( "id", )
 
     def __str__(self):
         return self.name
 
     #def get_absolute_url(self):
     #    return u'/info/%d' % ( appName , self.id )
+

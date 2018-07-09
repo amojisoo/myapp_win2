@@ -16,6 +16,7 @@ from info.views import Info_DeleteView
 urlpatterns = [
 
     path(''             , Info_ListView.as_view()        , name="index_info"),
+    #url(r'$'             , Info_ListView.as_view()        , name="index_info"),
     path('<int:pk>/'         , Info_DetailView.as_view()     , name="detail_info"),
     path('<int:pk>/update'    , Info_UpdateView.as_view()     , name="update_info"),
     path('<int:pk>/delete'    , Info_DeleteView.as_view()     , name="delete_info"),

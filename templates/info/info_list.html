@@ -9,6 +9,10 @@
 
 
 
+
+
+
+
 <div>
     <a href = "../" > <h1>  List View  </h1> </a><br>
 
@@ -36,14 +40,36 @@
           <hr>
 
 
-
         {% endfor %}
 
-
-
     </div>
-
 </div>
+
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+
+    {% if page_obj.has_previous %}
+      <li class="page-item "><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">
+        <span aria-hidden="true"> &laquo; </span>
+      </a></li>
+    {% endif %}
+
+    {% for page in page_obj.paginator.page_range  %}
+
+        <li class="page-item  {% if page == page_obj.number %} active {% endif %}  "><a class="page-link" href="?page={{ page }}"> {{ page }} </a></li>
+
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">
+          <span aria-hidden="true"> &raquo; </span>
+      </a></li>
+    {% endif %}
+
+  </ul>
+</nav>
+
 
 {% endblock %}
 
