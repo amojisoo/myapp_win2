@@ -31,7 +31,7 @@ urlpatterns = [
     url(r"jump", views.jump),
     url(r"temp", views.temp),
 
-    url(r"", views.main), # order very important
+    url(r"", views.temp), # order very important
 
 
 
