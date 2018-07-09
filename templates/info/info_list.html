@@ -3,11 +3,6 @@
 
 
 
-{% block NAVI %}
-    {% include "info/info_navi.html" %}
-{% endblock %}
-
-
 
 {%  block BODY %}
 
@@ -16,6 +11,12 @@
 
 <div>
     <a href = "../" > <h1>  List View  </h1> </a><br>
+
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href= "{% url 'create_info'    %}" >New</a>
+          </div>
+
     <div>
         {% for i in object_list %}
 
@@ -38,10 +39,7 @@
 
         {% endfor %}
 
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          </div>
+
 
     </div>
 
