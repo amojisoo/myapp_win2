@@ -5,6 +5,7 @@ from .models import Info
 class Info_Form(forms.ModelForm):
 
     name = forms.CharField( widget= forms.TextInput(attrs = { "size" : 50} ) )
+    memo = forms.CharField( widget= forms.Textarea(attrs = { "size" : 50} ) )
 
     class Meta:
         model = Info

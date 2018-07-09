@@ -1,5 +1,10 @@
 {%   extends "ABS_bootstrap_detail.html" %}
 
+{% block NAVI %}
+    {% include "info/info_navi.html" %}
+{% endblock %}
+
+
 {%  block BODY %}
 
 <div>
@@ -11,7 +16,7 @@
     <div>
 
             <hr>
-            {{ object.memo }}  <hr>
+            <pre> {{ object.memo }} </pre> <hr>
             {{ object.code }}
 
     </div>

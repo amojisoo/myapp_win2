@@ -30,8 +30,11 @@
 
   <body>
 
-    {% include "ABS_bootstrap_navi.html" %}
 
+
+            {% block NAVI %}
+
+            {% endblock %}
 
     <!-- Page Header -->
     <header class="masthead" style="background-image: url( {% static '/bootstrap_start/img/home-bg.jpg' %} )">
@@ -53,6 +56,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+
+            {% include "ABS_bootstrap_message.html" %}
+
+
 
             {% block BODY %}
 

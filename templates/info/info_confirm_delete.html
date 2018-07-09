@@ -3,14 +3,20 @@
 {%  block BODY %}
 
 <div>
-    <h1> DeleteView  </h1>
-    <a href = "../info/" > <h1>  {{ object.name }} </h1> </a>
+    <h1 style="color : red "> Delete View  </h1>
+    {{ object.pk }} : is Delete ?
+    <hr>
+    <a href = "{% url 'detail_info' object.pk  %}" > <h1>  {{ object.name }} </h1> </a>
 
+    {{ object.memo }}<br>
+    {{ object.code }}
+
+    <hr>
     <form method="post">
         {% csrf_token %}
 
         <button type="submit" class = "btn btn-danger"> Delete </button>
-        <a href = "{% url 'index_info' %}" class = "btn btn-default"> Cancel </a>
+        <a href = "{% url 'index_info' %}" class = "btn btn-outline-primary"> Cancel </a>
     </form>
 
 

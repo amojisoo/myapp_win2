@@ -19,7 +19,7 @@ urlpatterns = [
     path('<int:pk>/'         , Info_DetailView.as_view()     , name="detail_info"),
     path('<int:pk>/update'    , Info_UpdateView.as_view()     , name="update_info"),
     path('<int:pk>/delete'    , Info_DeleteView.as_view()     , name="delete_info"),
-    path('create'    , Info_CreateView.as_view()      , name="create"),
+    path('create'    , Info_CreateView.as_view()      , name="create_info"),
 
     path('summary', views.summary, name="index_bloag"),
 
