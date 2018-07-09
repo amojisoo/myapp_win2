@@ -1,16 +1,40 @@
-{%   extends "ABS_base.html" %}
+{%   extends "ABS_bootstrap.html" %}
 
 {%  block BODY %}
 
 <div>
-    <a href = "../" > <h1>  List View  </h1> </a>
+    <a href = "../" > <h1>  List View  </h1> </a><br>
     <div>
         {% for i in object_list %}
-            <a href = "./{{ i.id }}"> {{ i.name }}  </a>  <br>
+
+
+
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                <a href = "./{{ i.id }}"> {{ i.name }}  </a>  <br>
+              </h2>
+              <h3 class="post-subtitle">
+
+              </h3>
+            </a>
+            <p class="post-meta">  <a href="#"> {{ i.id }} </a>  {{ i.created }} </p>
+          </div>
+          <hr>
+
+
 
         {% endfor %}
 
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          </div>
+
     </div>
+
 </div>
 
 {% endblock %}
+
+

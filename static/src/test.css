@@ -1,11 +1,11 @@
 
 
-p
+h1
 {
     color : red ;
 }
-
-h1
+p ,div
 {
-    color : blue ;
+    color:blue;
+    line-height:1.5;
 }
