@@ -7,19 +7,16 @@
 {%  block BODY %}
 
 
-
-
-
-
-
-
 <div>
     <a href = "../" > <h1>  List View  </h1> </a><br>
 
           <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href= "{% url 'create_info'    %}" >New</a>
-          </div>
+
+      {% if user.is_authenticated %}
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href= "{% url 'create_info'    %}" >New</a>
+      </div>
+      {% endif %}
 
     <div>
         {% for i in object_list %}

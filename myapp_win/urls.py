@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf.urls import url , include
 from . import views
 
-
+from django.contrib.auth.views import LoginView , LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls ,  name="admin"),
@@ -31,9 +31,8 @@ urlpatterns = [
     url(r"jump", views.jump),
     url(r"temp", views.temp),
 
-    url(r"", views.temp), # order very important
-
-
-
+    path("login",  LoginView.as_view( template_name = "login.html") , name="login"),
+    path("logout", LogoutView.as_view( template_name = "logout.html"), name="logout"),
+    url(r"", views.temp),  # order very important
 
 ]

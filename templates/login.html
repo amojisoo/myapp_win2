@@ -13,15 +13,16 @@
             <span> <a href = "delete"> Delete </a> </span>
     {% endif %}
 
+    <form method="post" action="{% url "login" %}">
+        {% csrf_token %}
 
+        <table class="table">
+            {{ form }}
+        </table>
 
-    <div>
+        <button class="btn btn-primary" type="submit"> Login </button>
+    </form>
 
-            <hr>
-            <pre> {{ object.memo }} </pre> <hr>
-            {{ object.code }}
-
-    </div>
 </div>
 
 {% endblock %}

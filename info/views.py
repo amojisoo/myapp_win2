@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.urls import reverse_lazy
 from django.contrib import messages
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.views.generic import ListView
 from django.views.generic import DetailView
@@ -23,7 +23,7 @@ class Info_DetailView(DetailView):
     model = Info
 
 
-class Info_CreateView(CreateView):
+class Info_CreateView(LoginRequiredMixin , CreateView):
     model = Info
     form_class = Info_Form
     #fields = [ "name"  ]
@@ -31,6 +31,7 @@ class Info_CreateView(CreateView):
     #sucess_rul = reverse_lazy("index_info") # ERROR
     # must function define?
     template_name = "info/info_create.html"
+    login_url = "/login"
 
     def get_success_url(self):
         url = "http://www.yahoo.co.jp"
@@ -45,11 +46,12 @@ class Info_CreateView(CreateView):
         messages.error( self.request , "Save Filed")
         return super().form_invalid(form)
 
-class Info_UpdateView(UpdateView):
+class Info_UpdateView(LoginRequiredMixin , UpdateView):
     model = Info
     #fields = ["name"]
     form_class = Info_Form
     template_name = "info/info_update.html"
+    login_url = "/login"
 
     def get_success_url(self):
         getID = self.kwargs["pk"]
@@ -64,8 +66,10 @@ class Info_UpdateView(UpdateView):
         messages.error( self.request , "Edit Filed")
         return super().form_invalid(form)
 
-class Info_DeleteView(DeleteView):
+class Info_DeleteView(LoginRequiredMixin , DeleteView):
     model = Info
+    login_url = "/login"
+
     def get_success_url(self):
         sucess_rul = reverse_lazy("index_info")
         return sucess_rul

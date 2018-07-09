@@ -130,3 +130,4 @@ STATICFILES_DIRS = (
     os.path.normcase( os.path.join(BASE_DIR, "static")),
 )
 
+LOGIN_REDIRECT_URL= "/"
