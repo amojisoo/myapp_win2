@@ -1,0 +1,16 @@
+{%   extends "ABS_base.html" %}
+
+{%  block BODY %}
+
+<div>
+    <a href = "../" > <h1>  List View  </h1> </a>
+    <div>
+        {% for i in object_list %}
+            <a href = "./{{ i.id }}"> {{ i.name }}  </a>  <br>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

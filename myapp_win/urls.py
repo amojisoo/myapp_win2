@@ -24,8 +24,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    url(r'^blog/', include('blog.urls')),
-    url(r'^info/', include('info.urls')),
+    path('info/', include('info.urls')),
+    path('blog/', include('blog.urls')),
 
     url(r"time", views.time),
     url(r"jump", views.jump),

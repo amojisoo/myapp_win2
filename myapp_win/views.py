@@ -4,7 +4,14 @@ from django.shortcuts import render_to_response
 import datetime
 
 def main(request):
-    return HttpResponse( "Main Page  DJango" )
+    html = """
+"Main Page  DJango"
+    <br><a href = "./blog/"> blog </a>
+    <br><a href = "./info/"> info </a>
+
+    """
+
+    return HttpResponse( html  )
 
 
 def time(request):
