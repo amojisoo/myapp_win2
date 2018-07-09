@@ -6,6 +6,8 @@ appName = "info"
 class  Info(models.Model):
     #id              = []
     name            = models.CharField( max_length=200 , blank=True , default= "")
+    code            = models.CharField( max_length=200 , blank=True , default= "")
+    memo            = models.CharField( max_length=200 , blank=True , default= "")
 
     #created         = models.DateTimeField( auto_now_add = True )
     #release_data    = models.DateTimeField( auto_now_add = True )

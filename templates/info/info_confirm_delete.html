@@ -1,0 +1,21 @@
+{%   extends "ABS_bootstrap_detail.html" %}
+
+{%  block BODY %}
+
+<div>
+    <h1> DeleteView  </h1>
+    <a href = "../info/" > <h1>  {{ object.name }} </h1> </a>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <button type="submit" class = "btn btn-danger"> Delete </button>
+        <a href = "{% url 'index_info' %}" class = "btn btn-default"> Cancel </a>
+    </form>
+
+
+</div>
+
+{% endblock %}
+
+

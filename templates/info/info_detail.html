@@ -3,13 +3,16 @@
 {%  block BODY %}
 
 <div>
-    <a href = "../info/" > <h1>  {{ object.name }} </h1> </a>
+    <a href = "{% url 'index_info' %}" > <h1>  {{ object.name }} </h1> </a>
 
-    <div> <a href = "update"> Edit </a> </div>
+    <span> <a href = "update"> Edit </a> </span>
+    <span>  |  </span>
+    <span> <a href = "delete"> Delete </a> </span>
     <div>
 
-            {{ object.name }} <br>
-            {{ object.created }}
+            <hr>
+            {{ object.memo }}  <hr>
+            {{ object.code }}
 
     </div>
 </div>

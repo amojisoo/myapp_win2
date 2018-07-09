@@ -11,12 +11,14 @@ from info.views import Info_ListView
 from info.views import Info_DetailView
 from info.views import Info_CreateView
 from info.views import Info_UpdateView
+from info.views import Info_DeleteView
 
 urlpatterns = [
 
     path(''             , Info_ListView.as_view()        , name="index_info"),
     path('<int:pk>/'         , Info_DetailView.as_view()     , name="detail_info"),
     path('<int:pk>/update'    , Info_UpdateView.as_view()     , name="update_info"),
+    path('<int:pk>/delete'    , Info_DeleteView.as_view()     , name="delete_info"),
     path('create'    , Info_CreateView.as_view()      , name="create"),
 
     path('summary', views.summary, name="index_bloag"),
