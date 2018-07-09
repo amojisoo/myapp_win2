@@ -26,5 +26,5 @@ def temp(request):
     return render_to_response('tempSample.html', {'name': u'Alice'})
 
 def login(request):
-    html = "<html><body>Login</body></html>" % now
+    html = "<html><body>Login</body></html>"
     return HttpResponse(html)
