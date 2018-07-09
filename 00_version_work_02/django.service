@@ -1,0 +1,17 @@
+[Unit]
+Description = django daemon
+
+[Service]
+WorkingDirectory=/var/www/django/myapp_win
+ExecStart = /bin/sh excute.command
+Restar = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
+
+
+
+
+
+

@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+import psycopg2
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -77,14 +84,69 @@ WSGI_APPLICATION = 'myapp_win.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'AmazonDjango', # DB名を設定
+        'USER': 'conie6mm', # DBへ接続するユーザIDを設定
+        'PASSWORD': 'Leekyou7811#', # DBへ接続するユーザIDのパスワードを設定
+        'HOST': '13.71.132.251',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+        'TEST': {
+            'NAME': 'test_sample'
+        }
+    }
+}
+
+
+
+"""
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db2.sqlite3'),
     }
 }
 
+
+DATABASE = {
+    'default' : {
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'AmazonDjango',
+        'USER' : 'conie6mm',
+        'PASSWORD' : 'Leekyou7811#',
+        'HOST' : '192.168.10.52',
+        'PORT' : '3306',
+    }
+}
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'AmazonDjango',  # 適当です
+        'OPTIONS': {
+            'options': '-c search_path=python'
+        },
+
+        'USER': 'conie6mm',  # 適当です
+        'PASSWORD': 'Leekyou7811#',  # 適当です
+        'HOST': '192.168.10.52',  # 適当です (ローカルホストなら空でも可)
+        'PORT': '5432',  # 適当です (デフォルトポートなら空でも可)
+    }
+}
+
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
