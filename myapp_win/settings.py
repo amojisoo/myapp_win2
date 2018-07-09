@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'AmazonDjango', # DB名を設定
         'USER': 'conie6mm', # DBへ接続するユーザIDを設定
         'PASSWORD': 'Leekyou7811#', # DBへ接続するユーザIDのパスワードを設定
-        'HOST': '13.71.132.251',
+        'HOST': '192.168.10.52',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
