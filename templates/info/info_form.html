@@ -1,0 +1,23 @@
+{%   extends "ABS_bootstrap_list.html" %}
+
+{%  block BODY %}
+
+<div>
+    <a href = "../" > <h1>  Create View  </h1> </a><br>
+
+    <form method="POST">
+    {% csrf_token %}
+
+        <table class = "table">
+                {{ form }}
+        </table>
+
+        <button class = "btn btn-primary" > Send </button>
+    </form>
+
+
+</div>
+
+{% endblock %}
+
+

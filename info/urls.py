@@ -7,13 +7,17 @@ from django.contrib.auth import views as auth_views
 from info import views
 #import  blog.views.CLASS_VIEW  as CLASS_VIEW
 
-from info.views import InfoListView
-from info.views import InfoDetailView
+from info.views import Info_ListView
+from info.views import Info_DetailView
+from info.views import Info_CreateView
+from info.views import Info_UpdateView
 
 urlpatterns = [
 
-    path(''   , InfoListView.as_view()    , name="lista"),
-    path('<int:pk>', InfoDetailView.as_view(), name="detaila"),
+    path(''             , Info_ListView.as_view()        , name="index_info"),
+    path('<int:pk>/'         , Info_DetailView.as_view()     , name="detail_info"),
+    path('<int:pk>/update'    , Info_UpdateView.as_view()     , name="update_info"),
+    path('create'    , Info_CreateView.as_view()      , name="create"),
 
     path('summary', views.summary, name="index_bloag"),
 
