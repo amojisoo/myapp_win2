@@ -1,0 +1,15 @@
+[Install]
+WantedBy=multi-user.target
+[Unit]
+Description=Django Server
+[Service]
+WorkingDirectory=/var/www/django/myapp_win
+ExecStart=/usr/local/bin/python3 /var/www/django/myapp_win/manage.py runserver 0:8000
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-server
+Environment=NODE_ENV=production PORT=8000
+[Install]
+WantedBy=multi-user.target
