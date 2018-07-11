@@ -57,8 +57,25 @@ def forum_detail(request):
 def forum_list(request):
     return render_to_response('ABS_ColorAdmin/FORUM_list.html', {'name': u'Alice'})
 
-
+#-----------------
 
 
 def one(request):
-    return render(request , 'ABS_ColorAdmin/onepage.html')
+    return render(request, 'ABS_ColorAdmin/ONE_PAGE.html')
+
+#-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

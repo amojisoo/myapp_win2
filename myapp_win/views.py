@@ -23,7 +23,7 @@ def jump(request):
     return HttpResponseRedirect("http://www.yahoo.co.jp/")
 
 def temp(request):
-    return render_to_response('ABS_ColorAdmin/onepage.html', {'name': u'Alice'})
+    return render_to_response('ABS_ColorAdmin/ONE_PAGE.html', {'name': u'Alice'})
 
 def forum(request):
     return render_to_response('ABS_ColorAdmin/FORUM_index.html', {'name': u'Alice'})
