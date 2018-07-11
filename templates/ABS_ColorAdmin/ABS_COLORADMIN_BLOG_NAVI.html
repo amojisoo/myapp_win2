@@ -41,12 +41,13 @@
                 <li>
                     <a href="javascript:;" data-toggle="dropdown">POSTS <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="post_grid.html">Page with Grid View Blog Post</a></li>
-                        <li><a href="post_without_sidebar.html">Page without Sidebar</a></li>
+                        <li><a href="{% url "post_blog" %}">Post Detail</a></li>
+                        <li><a href="{% url "posts_blog" %}">POSTS</a></li>
+                        <li><a href="{% url "posts_grid_blog" %}">POSTS Grid</a></li>
+
                     </ul>
                 </li>
-                <li><a href="{% url "posts_blog" %}">POST</a></li>
-                <li><a href="{% url "post_blog" %}">POSTS</a></li>
+
 
                 <li><a href="{% url "about_blog" %}">ABOUT ME</a></li>
                 <li><a href="{% url "contact_blog" %}">CONTACT US</a></li>

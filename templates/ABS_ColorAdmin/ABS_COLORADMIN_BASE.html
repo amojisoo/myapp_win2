@@ -38,13 +38,15 @@
 	<script src="{% static "color_admin/plugins/jquery/jquery-3.2.1.min.js" %}"></script>
 	<script src="{% static "color_admin/plugins/bootstrap3/js/bootstrap.min.js" %}"></script>
 	<!--[if lt IE 9]>
-		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
-		<script src="../assets/crossbrowserjs/respond.min.js"></script>
-		<script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+		<script src="{%  static "color_admin/crossbrowserjs/html5shiv.js" %}></script>
+		<script src="{%  static "color_admin/crossbrowserjs/respond.min.js" %}></script>
+		<script src="{%  static "color_admin/crossbrowserjs/excanvas.min.js" %}></script>
 	<![endif]-->
 	<script src="{% static "color_admin/plugins/js-cookie/js.cookie.js" %}"></script>
 	<script src="{% static "color_admin/js/blog/apps.min.js" %} "></script>
 	<!-- ================== END BASE JS ================== -->
+    {% block SCRIPT_END %}
+    {% endblock %}
 
 	<script>
 	    $(document).ready(function() {

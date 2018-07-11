@@ -27,7 +27,7 @@ def index(request):
     return render_to_response('ABS_ColorAdmin/BLOG_index.html', {'name': u'Alice'})
 
 
-
+#-----------------
 def about(request):
     return render_to_response('ABS_ColorAdmin/BLOG_about.html', {'name': u'Alice'})
 
@@ -38,8 +38,15 @@ def contact(request):
 def posts(request):
     return render_to_response('ABS_ColorAdmin/BLOG_posts.html', {'name': u'Alice'})
 
+def posts_grid(request):
+    return render_to_response('ABS_ColorAdmin/BLOG_posts_grid.html', {'name': u'Alice'})
+
+
 def post(request):
     return render_to_response('ABS_ColorAdmin/BLOG_post.html', {'name': u'Alice'})
+
+
+#-----------------
 
 def forum(request):
     return render_to_response('ABS_ColorAdmin/FORUM_index.html', {'name': u'Alice'})
