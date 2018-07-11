@@ -65,11 +65,8 @@ def one(request):
 
 #-----------------
 
-
-
-
-
-
+def e_index(request):
+    return render(request, 'ABS_ColorAdmin/E_index.html')
 
 
 

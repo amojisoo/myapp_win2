@@ -37,7 +37,11 @@ urlpatterns = [
 
     path("one", views.one, name="one_blog"),
 
+    path("e_index", views.e_index, name="index_e"),
+
     #url(r"^aa/list$"   , CLASS_VIEW.VIEW_LIST.as_view(),     name="aftereffects_list")
+
+
 
 ]
 
