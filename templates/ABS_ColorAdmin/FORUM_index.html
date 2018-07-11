@@ -1,33 +1,64 @@
-{%   extends "ABS_ColorAdmin/ABS_COLORADMIN_BASE.html" %}
+{%   extends "ABS_ColorAdmin/ABS_FORUM_BASE.html" %}
 {% load static %}
 
 {% block BODY %}
 
+    {% include "ABS_ColorAdmin/ABS_FORUM_NAVI.html" %}
 
+    <!-- begin search-banner -->
+    <div class="search-banner has-bg">
+        <!-- begin bg-cover -->
+        <div class="bg-cover">
+            <img src="{%  static "color_admin/img/cover/cover-1.jpg" %}" alt="" />
+        </div>
+        <!-- end bg-cover -->
+        <!-- begin container -->
+        <div class="container">
+            <h1>1,293 Post for discussion</h1>
+            <div class="input-group m-b-20">
+                <input type="text" class="form-control input-lg" placeholder="Search the forums" />
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-lg"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+            <h5>Browse by Popular Categories</h5>
+            <ul class="popular-tags">
+                <li><a href="#"><i class="fa fa-circle text-danger"></i> CSS</a></li>
+                <li><a href="#"><i class="fa fa-circle text-primary"></i> Bootstrap</a></li>
+                <li><a href="#"><i class="fa fa-circle text-warning"></i> Javascript</a></li>
+                <li><a href="#"><i class="fa fa-circle"></i> jQuery</a></li>
+                <li><a href="#"><i class="fa fa-circle text-success"></i> Android</a></li>
+                <li><a href="#"><i class="fa fa-circle text-muted"></i> iOS</a></li>
+                <li><a href="#"><i class="fa fa-circle text-purple"></i> Template</a></li>
+            </ul>
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end search-banner -->
 
     <!-- begin content -->
     <div class="content">
         <!-- begin container -->
         <div class="container">
+
+
             <!-- begin panel-forum -->
             <div class="panel panel-forum">
                 <!-- begin panel-heading -->
-                <div class="panel-heading">
-                    <h4 class="panel-title">Official Management District</h4>
-                </div>
+                <div class="panel-heading"><h4 class="panel-title">Official Management District</h4></div>
                 <!-- end panel-heading -->
                 <!-- begin forum-list -->
                 <ul class="forum-list">
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-gold-note.png" %}" alt="" />
+                            <img src="{%  static "color_admin/img/icon/icon-gold-note.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
                         <div class="info-container">
                             <div class="info">
-                                <h4 class="title"><a href="category_list.html">Announcement</a></h4>
+                                <h4 class="title"><a href="./forum_list">Announcement</a></h4>
                                 <p class="desc">
                                     The latest official news, events , announcements, updates and other information released .
                                 </p>
@@ -45,14 +76,13 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-cone.png" %}" alt="" />
-
+                            <img src="{%  static "color_admin/img/icon/icon-cone.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
                         <div class="info-container">
                             <div class="info">
-                                <h4 class="title"><a href="category_list.html">Bug / Suggestion</a></h4>
+                                <h4 class="title"><a href="./forum_detail">Bug / Suggestion</a></h4>
                                 <p class="desc">
                                     Template development proposals, content-related complaints and bug submission.
                                 </p>
@@ -67,10 +97,12 @@
                         </div>
                         <!-- end info-container -->
                     </li>
+
                 </ul>
                 <!-- end forum-list -->
             </div>
             <!-- end panel-forum -->
+
             <!-- begin panel-forum -->
             <div class="panel panel-forum">
                 <!-- begin panel-heading -->
@@ -83,8 +115,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-chat-bubble.png" %}" alt="" />
-
+                            <img src="{%  static "color_admin/img/icon/icon-chat-bubble.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -108,8 +139,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-chat-bubble.png" %}" alt="" />
-
+                            <img src="{%  static "color_admin/img/icon/icon-chat-bubble.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -133,8 +163,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-chat-bubble.png" %}" alt="" />
-
+                            <img src="{%  static "color_admin/img/icon/icon-chat-bubble.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -159,6 +188,7 @@
                 <!-- end forum-list -->
             </div>
             <!-- end panel-forum -->
+
             <!-- begin panel-forum -->
             <div class="panel panel-forum">
                 <!-- begin panel-heading -->
@@ -171,8 +201,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-discussion-grey.png" %}" alt="" />
-
+                            <img src="{%  static "color_admin/img/icon/icon-discussion-grey.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -196,8 +225,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="{% static "color_admin/img/icon/icon-discussion-grey.png" %}" alt="" />
-
+                            <img src="{%  static "color_admin/img/icon/icon-discussion-grey.png" %}" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -222,11 +250,12 @@
                 <!-- end forum-list -->
             </div>
             <!-- end panel-forum -->
+
+
+
         </div>
         <!-- end container -->
     </div>
     <!-- end content -->
 
-
 {% endblock %}
-

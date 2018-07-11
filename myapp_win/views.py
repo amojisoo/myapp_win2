@@ -25,6 +25,9 @@ def jump(request):
 def temp(request):
     return render_to_response('ABS_ColorAdmin/onepage.html', {'name': u'Alice'})
 
+def forum(request):
+    return render_to_response('ABS_ColorAdmin/FORUM_index.html', {'name': u'Alice'})
+
 def login(request):
     html = "<html><body>Login</body></html>"
     return HttpResponse(html)

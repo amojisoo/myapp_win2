@@ -28,7 +28,8 @@ urlpatterns = [
     path("posts", views.posts, name="posts_blog"),
 
     path("forum", views.forum, name="forum_blog"),
-    path("forumdetail", views.forum_detail, name="forum_blog"),
+    path("forum_detail", views.forum_detail, name="forumdetail_blog"),
+    path("forum_list", views.forum_list, name="forumlist_blog"),
 
     path("one", views.one, name="one_blog"),
 
