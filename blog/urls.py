@@ -39,6 +39,19 @@ urlpatterns = [
 
     path("e_index", views.e_index, name="index_e"),
 
+    path("e_about", views.e_about, name="about_e"),
+    path("e_contact", views.e_contat, name="contact_e"),
+    path("e_faq", views.e_faq, name="faq_e"),
+    path("e_account", views.e_account, name="account_e"),
+    path("e_product", views.e_product, name="product_e"),
+    path("e_product_detail", views.e_product_detail, name="product_detail_e"),
+    path("e_search_results", views.e_search_results, name="search_results__e"),
+
+    path("e_checkout_1", views.e_checkout_1, name="checkout_1"),
+    path("e_checkout_2", views.e_checkout_2, name="checkout_2"),
+    path("e_checkout_3", views.e_checkout_3, name="checkout_3"),
+    path("e_checkout_4", views.e_checkout_4, name="checkout_4"),
+
     #url(r"^aa/list$"   , CLASS_VIEW.VIEW_LIST.as_view(),     name="aftereffects_list")
 
 

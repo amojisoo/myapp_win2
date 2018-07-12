@@ -70,6 +70,41 @@ def e_index(request):
 
 
 
+def e_about(request):
+    return render(request, 'ABS_ColorAdmin/E_about.html')
+
+def e_contat(request):
+    return render(request, 'ABS_ColorAdmin/E_contact.html')
+
+def e_faq(request):
+    return render(request, 'ABS_ColorAdmin/E_faq.html')
+
+def e_account(request):
+    return render(request, 'ABS_ColorAdmin/E_account.html')
+
+def e_product(request):
+    return render(request, 'ABS_ColorAdmin/E_product.html')
+
+def e_product_detail(request):
+    return render(request, 'ABS_ColorAdmin/E_product_detail.html')
+
+def e_search_results(request):
+    return render(request, 'ABS_ColorAdmin/E_search_results.html')
+
+def e_checkout_1(request):
+    return render(request, 'ABS_ColorAdmin/E_checkout_1.html')
+
+def e_checkout_2(request):
+    return render(request, 'ABS_ColorAdmin/E_checkout_2.html')
+
+def e_checkout_3(request):
+    return render(request, 'ABS_ColorAdmin/E_checkout_3.html')
+
+def e_checkout_4(request):
+    return render(request, 'ABS_ColorAdmin/E_checkout_4.html')
+
+
+
 
 
 
